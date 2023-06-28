@@ -10,7 +10,7 @@
 </div>
 
 <p align="center">
-    <img width="750" alt="Animation" src="assets/workflow.png"/>
+    <img width="750" alt="picture" src="assets/workflow.png"/>
 </p>
 
 ## Introduction
@@ -93,7 +93,7 @@ To train a model Γ that estimates the pathologist labelling function, we constr
 
 
 <p align="center">
-    <img width="750" alt="Animation" src="assets/feedbacks.png"/>
+    <img width="750" alt="picture" src="assets/feedbacks.png"/>
 </p>
 
 
