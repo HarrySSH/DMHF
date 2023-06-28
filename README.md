@@ -19,8 +19,7 @@ This is the codespace for our work "Aligning Synthetic Medical Images with Clini
 This paper introduces a pathologist-in-the-loop framework for generating clinically-plausible synthetic medical images. 
 Starting with a diffusion model pretrained using real images, our framework comprises three steps: (1) evaluating the generated images by expert pathologists to assess whether they satisfy clinical desiderata (2) training a reward model that predicts the pathologist feedback on new samples, and (3) incorporating expert knowledge into the diffusion model by using the reward model to inform a finetuning objective. 
 
-
-
+We are still actively developing this repo. 
 
 
 ## Install 
@@ -41,7 +40,7 @@ Starting with a diffusion model pretrained using real images, our framework comp
 
 ## Preparing Data 
 
-For creating your own dataset, simply dump all of your images into a directory with ".jpg", ".jpeg", or ".png" extensions. If you wish to train a class-conditional model, name the files like "mylabel1_XXX.jpg", "mylabel2_YYY.jpg", etc., so that the data loader knows that "mylabel1" and "mylabel2" are the labels. Subdirectories will automatically be enumerated as well, so the images can be organized into a recursive structure (although the directory names will be ignored, and the underscore prefixes are used as names).
+For creating your own dataset, simply dump all of your images into a directory with ".jpg", ".jpeg", or ".png" extensions. If you wish to train a class-conditional model, name the files like "mylabel1_XXX.jpg", "mylabel2_YYY.jpg", etc., so that the data loader knows that "mylabel1" and "mylabel2" are the labels. Subdirectories will automatically be enumerated as well, so the images can be organized into a recursive structure (although the directory names will be ignored, and the underscore prefixes are used as names). 
 
 The images will automatically be scaled and center-cropped by the data-loading pipeline. Simply pass --data_dir path/to/images to the training script, and it will take care of the rest.
 
@@ -123,15 +122,20 @@ The naming is the same as the baseline training model.
     ```
 
 
-## Released checkpoint and samples 
+## Released checkpoint and samples
+
 * For this paper, the medical data could not be shared due to the privacy issue.
 * The reward model will be shared soon.
 
 
+## Further reading
 
-
+For our baseline generative model, we used conditional diffusion model\cite{nichol2021improved}. 
+Our fine-tuning pipeline is based on publicly released repository (https://github.com/openai/improved-diffusion.git).
+For more details on different parameters for diffusion models, as well as the sampling approches, please refer to this repo.
 
 ## Citation
+
 ```
 @article{sun2023aligning,
   title={Aligning Synthetic Medical Images with Clinical Knowledge using Human Feedback},
