@@ -10,7 +10,7 @@
 </div>
 
 <p align="center">
-    <img width="750" alt="picture" src="assets/workflow.png"/>
+    <img width="750" alt="picture" src="assets/Workflow.png"/>
 </p>
 
 ## Introduction
